@@ -1,0 +1,22 @@
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .list-group-item,
+.dark-mode .form-control,
+.dark-mode .form-select,
+.dark-mode .btn {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border-color: #444;
+}
+
+.badge {
+  font-size: 0.75rem;
+}

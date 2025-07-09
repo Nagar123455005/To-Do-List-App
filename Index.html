@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced To-Do App</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+   
+    <link rel="stylesheet" href="./Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+</head>
+<body class="light-mode">
+  <div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h1><i class="fas fa-list-check me-2"></i>To-Do List</h1>
+      <button id="toggleTheme" class="btn btn-outline-secondary">
+        <i id="themeIcon" class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <div class="mb-3 row g-2">
+      <div class="col-md-4">
+        <input type="text" id="taskInput" class="form-control" placeholder="Task name">
+      </div>
+      <div class="col-md-2">
+        <input type="date" id="dueDateInput" class="form-control">
+      </div>
+      <div class="col-md-2">
+        <select id="priorityInput" class="form-select">
+          <option value="Low">Low</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <select id="categoryInput" class="form-select">
+          <option value="General" selected>General</option>
+          <option value="Work">Work</option>
+          <option value="Personal">Personal</option>
+          <option value="Urgent">Urgent</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <button id="addTaskBtn" class="btn btn-primary w-100"><i class="fas fa-plus"></i> Add</button>
+      </div>
+    </div>
+
+    <div class="row mb-3 g-2">
+      <div class="col-md-4">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search tasks...">
+      </div>
+      <div class="col-md-3">
+        <select id="filterCategory" class="form-select">
+          <option value="All">All Categories</option>
+          <option value="Work">Work</option>
+          <option value="Personal">Personal</option>
+          <option value="Urgent">Urgent</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select id="sortOption" class="form-select">
+          <option value="default">Sort by</option>
+          <option value="name">Name</option>
+          <option value="date">Due Date</option>
+          <option value="priority">Priority</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <button id="deleteCompletedBtn" class="btn btn-danger w-100"><i class="fas fa-trash"></i> Delete Completed</button>
+      </div>
+    </div>
+
+    <div id="alertBox"></div>
+
+    <ul id="taskList" class="list-group mb-3"></ul>
+
+    <div class="progress">
+      <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%">0%</div>
+    </div>
+  </div>
+
+
+  <script src="./bootstrap.bundle.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
